@@ -3,10 +3,10 @@ from telethon import TelegramClient, events
 
 # Ahi van los datos de la página https://my.telegram.org/apps
 api_id = 123456
-api_hash = '123445ansdjasdgja'
+api_hash = '12736812ksajdksak'
 
 # Tu ID de usuario de Telegram
-mi_id = 12345678  # Reemplaza con tu propio ID
+mi_id = 1234567  # Reemplaza con tu propio ID
 
 # Crear el cliente de Telegram
 client = TelegramClient('user', api_id, api_hash)
@@ -15,7 +15,7 @@ client = TelegramClient('user', api_id, api_hash)
 last_response_time = {}
 
 # Tiempo de espera en segundos antes de poder volver a responder al mismo contacto
-tiempo_espera = 900  # 900 segundos = 15 minutos
+tiempo_espera = 100  # 900 segundos = 15 minutos
 
 @client.on(events.NewMessage)
 async def handler(event):
@@ -23,7 +23,7 @@ async def handler(event):
     sender = await message.get_sender()
 
     # Verificar si el mensaje proviene de un usuario (no de un grupo o canal) y si el remitente es un contacto
-    if sender.id != mi_id and sender.is_contact:
+    if sender.id != mi_id:
         user_id = sender.id
 
         # Obtener la hora actual
