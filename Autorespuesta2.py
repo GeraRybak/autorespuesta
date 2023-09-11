@@ -15,7 +15,7 @@ client = TelegramClient('user', api_id, api_hash)
 last_response_time = {}
 
 # Tiempo de espera en segundos antes de poder volver a responder al mismo contacto
-tiempo_espera = 100  # 900 segundos = 15 minutos
+tiempo_espera = 900  # 900 segundos = 15 minutos
 
 @client.on(events.NewMessage)
 async def handler(event):
