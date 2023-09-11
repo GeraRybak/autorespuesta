@@ -1,3 +1,8 @@
+# https://my.telegram.org/apps para crear la app con el numero de telefono de 
+# Bajar python de https://www.python.org
+# Se instala la libreria con el comando "pip instal telethon" desde la consola de powershell
+# Se utiliza el bot @RawDataBot para obtener el Id de telegram
+
 import time
 from telethon import TelegramClient, events
 
